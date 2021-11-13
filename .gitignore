@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+npm-debug.*
+
+dist/
+node__modules/
+package-lock.json
+app/css/*
