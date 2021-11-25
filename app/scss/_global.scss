@@ -1,3 +1,76 @@
+body,
+html {
+  height: 100%;
+}
+
 body {
-  
+  font-size: 16px;
+  line-height: 1.4;
+  @extend %opensans-400;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
+
+.animation:focus {
+  box-shadow: 0 0 0 3px $green-200;
+  border-radius: 3px;
+}
+
+.animation:hover {
+  opacity: 0.7;
+}
+
+.animation:active {
+  color: $green-200;
+}
+
+.animation-filter:focus {
+  box-shadow: 0px 0px 0px 3px $green-200;
+  border-radius: 3px;
+}
+
+.animation-filter:hover {
+  color: $green-900;
+}
+
+.mixitup-control-active {
+  border-bottom: 3px solid rgba($green-900, 0.2);
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1.4;
+  @extend %ruda-600;
+  color: $dark-900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+.logo__img {
+  object-fit: contain;
 }
