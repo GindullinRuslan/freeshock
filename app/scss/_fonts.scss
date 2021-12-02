@@ -1,79 +1,71 @@
 @font-face {
-  font-family: 'OpenSans_SemiCondensed-Light';
+  font-family: 'OpenSans';
   font-weight: 300;
   font-style: normal;
-  src: local('OpenSans_SemiCondensed-Light'),
-       url('../fonts/OpenSans_SemiCondensed-Light.woff2') format('woff2'),
+  src: url('../fonts/OpenSans_SemiCondensed-Light.woff2') format('woff2'),
        url('../fonts/OpenSans_SemiCondensed-Light.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans_SemiCondensed-Regular';
+  font-family: 'OpenSans';
   font-weight: 400;
   font-style: normal;
-  src: local('OpenSans_SemiCondensed-Regular'),
-       url('../fonts/OpenSans_SemiCondensed-Regular.woff2') format('woff2'),
+  src: url('../fonts/OpenSans_SemiCondensed-Regular.woff2') format('woff2'),
        url('../fonts/OpenSans_SemiCondensed-Regular.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans_SemiCondensed-SemiBold';
+  font-family: 'OpenSans';
   font-weight: 600;
   font-style: normal;
-  src: local('OpenSans_SemiCondensed-SemiBold'),
-       url('../fonts/OpenSans_SemiCondensed-SemiBold.woff2') format('woff2'),
+  src: url('../fonts/OpenSans_SemiCondensed-SemiBold.woff2') format('woff2'),
        url('../fonts/OpenSans_SemiCondensed-SemiBold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'OpenSans_SemiCondensed-Bold';
+  font-family: 'OpenSans';
   font-weight: 700;
   font-style: normal;
-  src: local('OpenSans_SemiCondensed-Bold'),
-       url('../fonts/OpenSans_SemiCondensed-Bold.woff2') format('woff2'),
+  src: url('../fonts/OpenSans_SemiCondensed-Bold.woff2') format('woff2'),
        url('../fonts/OpenSans_SemiCondensed-Bold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ruda-Regular';
+  font-family: 'Ruda';
   font-weight: 400;
   font-style: normal;
-  src: local('Ruda-Regular'),
-       url('../fonts/Ruda-Regular.woff2') format('woff2'),
+  src: url('../fonts/Ruda-Regular.woff2') format('woff2'),
        url('../fonts/Ruda-Regular.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ruda-SemiBold';
+  font-family: 'Ruda';
   font-weight: 600;
   font-style: normal;
-  src: local('Ruda-SemiBold'),
-       url('../fonts/Ruda-SemiBold.woff2') format('woff2'),
+  src: url('../fonts/Ruda-SemiBold.woff2') format('woff2'),
        url('../fonts/Ruda-SemiBold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ruda-Bold';
+  font-family: 'Ruda';
   font-weight: 700;
   font-style: normal;
-  src: local('Ruda-Bold'),
-       url('../fonts/Ruda-Bold.woff2') format('woff2'),
+  src: url('../fonts/Ruda-Bold.woff2') format('woff2'),
        url('../fonts/Ruda-Bold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ruda-Bold';
+  font-family: 'Ruda';
   font-weight: 900;
   font-style: normal;
-  src: local('Ruda-ExtraBold'),
-       url('../fonts/Ruda-ExtraBold.woff2') format('woff2'),
+  src: url('../fonts/Ruda-ExtraBold.woff2') format('woff2'),
        url('../fonts/Ruda-ExtraBold.woff') format('woff');
   font-display: swap;
 }
