@@ -4,6 +4,8 @@ $(function(){
     prevArrow: '<button type="button" class="top-slider__btn top-slider__btn--prev"><svg class="top-slider__arrow top-slider__arrow--prev"><use xlink:href="./images/sprite.svg#icon-arrow-left"></use></svg></button>',
 
 		nextArrow: '<button type="button" class="top-slider__btn top-slider__btn--next"><svg class="top-slider__arrow top-slider__arrow--next"><use xlink:href="./images/sprite.svg#icon-arrow-right"></use></svg></button>',
+
+    infinite: false,
   });
 
   $('.header__catalog-btn').on("click",function (event) {
