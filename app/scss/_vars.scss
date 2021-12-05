@@ -1,5 +1,4 @@
-
-$green-1000: #4D800C;
+$green-1000: #4d800c;
 $green-900: #63a60f;
 $green-200: #e0edcf;
 $green-100: #eff6e7;
@@ -19,9 +18,9 @@ $white: #ffffff;
 
 $black: #000000;
 
-$open-sans: 'OpenSans', sans-serif;
+$open-sans: "OpenSans", sans-serif;
 
-$ruda: 'Ruda', sans-serif;
+$ruda: "Ruda", sans-serif;
 
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
@@ -37,7 +36,7 @@ $ruda: 'Ruda', sans-serif;
   }
 }
 
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
