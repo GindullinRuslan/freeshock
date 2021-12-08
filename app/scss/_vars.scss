@@ -41,3 +41,14 @@ $ruda: "Ruda", sans-serif;
   display: $display;
   position: $pos;
 }
+
+$xl: 1325px;
+$l: 1024px;
+$m: 610px;
+$s: 500px;
+
+@mixin max-w($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

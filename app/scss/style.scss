@@ -21,6 +21,14 @@
     position: relative;
     transition: background-color 0.5s;
 
+    @include max-w($xl) {
+      margin-bottom: 10px;
+    }
+
+    @include max-w($l) {
+      display: none;
+    }
+
     &::before,
     &::after {
       @include pseudo;
@@ -61,22 +69,250 @@
   &__top {
     padding: 14px 0;
     background-color: $dark-800;
+
+    @include max-w($l) {
+      padding: 1px 0;
+    }
   }
 
   &__topinner {
     display: flex;
     justify-content: space-between;
+
+    @include max-w($xl) {
+      justify-content: space-between;
+    }
   }
 
   &__bottom {
     padding: 25px 0;
     background-color: $green-900;
+
+    @include max-w($l) {
+      padding: 11px 0;
+    }
   }
 
   &__bottom-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include max-w($xl) {
+      flex-direction: column;
+    }
+
+    @include max-w($l) {
+      flex-direction: inherit;
+    }
+  }
+}
+
+.burger-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: none;
+
+  @include max-w($l) {
+    display: block;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/icons/icon-burger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.media-menu {
+  margin-left: -15px;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+  background-color: $white;
+  transform: scale(0);
+
+  &__wrapper {
+    padding: 0 15px;
+  }
+
+  &__top {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &__usernav {
+    padding: 9px 0 7px;
+    background-color: $green-900;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__login,
+  &__registration {
+    padding: 0 13px;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $white;
+    font-family: $open-sans;
+    font-weight: 400;
+  }
+
+  &__login {
+    border-right: 1px solid $white;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+    }
+  }
+
+  &__catalog-btn {
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: url(../images/sprite.svg#icon-header-btn-nav);
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 10px;
+      top: 18px;
+      width: 50px;
+      height: 19px;
+    }
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 32px;
+    margin-right: 15px;
+  }
+
+  &__closebtn {
+    width: 44px;
+    height: 44px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(../images/icons/icon-close.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__address {
+    padding: 24px 0;
+
+    & .address__contacts-link {
+      padding-left: 40px;
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      font-family: $open-sans;
+      font-weight: 400;
+      color: $dark-800;
+      position: relative;
+      content: "";
+
+      &::before {
+        @include pseudo;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 22px;
+        top: 0;
+        left: 0;
+      }
+
+      &--tel::before {
+        background-image: url(../images/icons/icon-telblack.svg);
+      }
+
+      &--map::before {
+        background-image: url(../images/icons/icon-map.svg);
+      }
+    }
+
+    & .social__link svg {
+      fill: $black;
+    }
+
+    & .social {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: -24px;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: rgba($silver-600, 0.3);
+      }
+    }
+  }
+
+  & .footer__menu {
+    padding-top: 24px;
+    column-count: 1;
+    margin-left: 0;
+  }
+
+  & .footer__item {
+    margin-bottom: 0;
+  }
+
+  & .footer__link {
+    padding: 12px 0;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $dark-800;
+    display: block;
+  }
+
+  &--active {
+    transform: scale(1);
+    display: block;
+    z-index: 1;
+    overflow: scroll;
+    max-height: 717px;
   }
 }
 
@@ -93,6 +329,10 @@
   padding-left: 44px;
   margin-right: 48px;
 
+  @include max-w($l) {
+    font-size: 0;
+  }
+
   &::before {
     @include pseudo;
     background-repeat: no-repeat;
@@ -101,6 +341,10 @@
     height: 22px;
     left: 0;
     top: -2px;
+
+    @include max-w($l) {
+      left: 33px;
+    }
   }
 
   &--address::before {
@@ -120,6 +364,10 @@
   position: relative;
   padding-left: 44px;
 
+  @include max-w($l) {
+    font-size: 0;
+  }
+
   &::before {
     @include pseudo;
     background-repeat: no-repeat;
@@ -128,6 +376,10 @@
     height: 22px;
     left: 0;
     top: -2px;
+
+    @include max-w($l) {
+      left: 7px;
+    }
   }
 
   &--tel::before {
@@ -136,6 +388,9 @@
 }
 
 .menu {
+  @include max-w($xl) {
+    display: none;
+  }
   display: flex;
   &__item:not(:last-child) {
     margin-right: 24px;
@@ -214,6 +469,44 @@
   width: 100%;
   position: relative;
 
+  &::before {
+    @include pseudo;
+    background-image: url(../images/icons/icon-search.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    top: 16px;
+    left: 15px;
+  }
+
+  @include max-w($xl) {
+    margin-bottom: 10px;
+  }
+
+  @include max-w($l) {
+    width: 100%;
+    display: none;
+  }
+
+  &--active {
+    transition: transform 0.5s;
+    position: relative;
+  }
+
+  @include max-w($l) {
+    &--active {
+      position: absolute;
+      top: 118px;
+      display: block;
+      z-index: 21;
+    }
+  }
+
+  &__label {
+    position: relative;
+  }
+
   &__input {
     max-width: 418px;
     width: 100%;
@@ -249,35 +542,10 @@
     font-family: inherit;
     font-weight: 600;
     transition: box-shadow 0.5s, background-color 0.5s;
-    position: relative;
 
-    &::after {
-      @include pseudo;
-      width: 44px;
-      height: 44px;
-      border-radius: 3px;
-      top: 3px;
-      left: -413px;
-
-      &:focus,
-      &:hover {
-        background-color: rgba($white, 0.1);
-      }
-
-      &:active {
-        filter: drop-shadow(0 4px 4px rgba($black, 0.25));
-      }
-    }
-
-    &::before {
-      @include pseudo;
-      background-image: url(../images/icons/icon-search.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 20px;
-      height: 20px;
-      top: 16px;
-      left: -400px;
+    @include max-w($m) {
+      padding: 15px 26px;
+      border-radius: 0;
     }
 
     &:focus {
@@ -302,6 +570,14 @@
     margin-right: 10px;
   }
 
+  & > .user-nav__item:first-child {
+    display: none;
+
+    @include max-w($l) {
+      display: block;
+    }
+  }
+
   &__btn {
     position: relative;
     display: inline-block;
@@ -322,12 +598,22 @@
       transform: translate(-50%, -50%);
       transition: box-shadow 0.5s, background-color 0.5s, filter 0.5s, opacity 0.5s;
     }
+
+    &--search::before {
+      background-image: url(../images/sprite.svg#icon-search);
+      width: 70px;
+      height: 70px;
+      filter: invert(100%) sepia(11%) saturate(7404%) hue-rotate(170deg) brightness(110%) contrast(118%);
+    }
+
     &--user::before {
       background-image: url(../images/icons/icon-user.svg);
     }
+
     &--favorites::before {
       background-image: url(../images/icons/icon-heart.svg);
     }
+
     &--cart::before {
       background-image: url(../images/icons/icon-cart.svg);
     }
@@ -359,13 +645,19 @@
     letter-spacing: 0.03em;
     text-align: right;
   }
+
+  &__itemnone {
+    @include max-w($l) {
+      display: none;
+    }
+  }
 }
 
 .top-slider {
   &__items {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
   }
 
   &__item {
@@ -374,6 +666,10 @@
     justify-content: center;
     align-items: center;
     margin-top: auto;
+
+    @include max-w($l) {
+      min-height: 300px;
+    }
   }
 
   &__content {
@@ -382,6 +678,10 @@
     padding: 24px 0 24px 24px;
     background-color: rgba($white, 0.8);
     border-radius: 4px;
+
+    @include max-w($l) {
+      margin: 0 -18px;
+    }
   }
 
   &__title {
@@ -394,11 +694,20 @@
     max-width: 761px;
     margin-bottom: 12px;
     @include line-clamp(3);
+
+    @include max-w($l) {
+      font-weight: 600;
+      font-size: 20px;
+    }
   }
   &__subtitle {
     display: block;
     color: $red-900;
     @include line-clamp(2);
+
+    @include max-w($l) {
+      font-weight: 600;
+    }
   }
 
   &__text {
@@ -418,6 +727,10 @@
     top: 50%;
     transform: translateY(-50%);
     transition: box-shadow 0.5s, background-color 0.5s;
+
+    @include max-w($xl) {
+      display: none;
+    }
 
     &--next {
       right: 60px;
@@ -471,6 +784,37 @@
       fill: $silver-600;
     }
   }
+
+  & .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    list-style: none;
+    left: 45%;
+    bottom: 15px;
+    transform: scale(0);
+
+    @include max-w($l) {
+      transform: scale(1);
+    }
+  }
+
+  & .slick-dots button {
+    font-size: 0;
+    margin: 0 6px;
+    border-radius: 50%;
+    width: 10px;
+    height: 14px;
+    background-color: $white;
+    border: 1px solid $silver-600;
+  }
+
+  & .slick-active button {
+    border: 1px solid $green-900;
+    background-color: $green-900;
+    transition: all 0.5s;
+  }
 }
 
 .delivery {
@@ -483,6 +827,11 @@
   &__items {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    @include max-w($l) {
+      justify-content: stretch;
+    }
   }
 
   &__item {
@@ -490,6 +839,12 @@
     width: 100%;
     padding-left: 74px;
     position: relative;
+
+    @include max-w($l) {
+      &:not(:last-child) {
+        margin-bottom: 31px;
+      }
+    }
 
     &::before {
       @include pseudo;
@@ -543,15 +898,24 @@
   text-align: center;
   padding: 72px 0;
 
+  @include max-w($l) {
+    padding: 48px 0;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 18px;
+
+    @include max-w($l) {
+      justify-self: center;
+      margin: 0 -2px 18px -2px;
+    }
   }
 
   &__item {
-    margin-bottom: 30px;
+    margin: 0 2px 30px 2px;
   }
 }
 
@@ -559,6 +923,11 @@
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
+  flex-wrap: wrap;
+
+  @include max-w($m) {
+    margin-bottom: 24px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 24px;
@@ -574,6 +943,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     transition: box-shadow 0.5s, color 0.5s;
+
+    @include max-w($l) {
+      font-size: 14px;
+    }
   }
 
   .mixitup-control-active {
@@ -722,6 +1095,10 @@
   overflow: hidden;
   transition: border-color 0.5s;
 
+  @include max-w($l) {
+    max-width: 170px;
+  }
+
   &:hover {
     border-color: $green-900;
   }
@@ -779,6 +1156,11 @@
     background-repeat: no-repeat;
     object-fit: contain;
     margin-bottom: 8px;
+
+    @include max-w($m) {
+      width: 170px;
+      height: 120px;
+    }
   }
 
   &__info {
@@ -907,10 +1289,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 18px;
+
+    @include max-w($l) {
+      justify-content: center;
+    }
   }
 
   &__item {
     margin-bottom: 30px;
+
+    @include max-w($l) {
+      margin: 0 2px 15px 2px;
+    }
   }
 }
 
@@ -1006,6 +1396,10 @@
 .partners {
   padding: 72px 0;
 
+  @include max-w($l) {
+    padding: 48px 0;
+  }
+
   &__list {
     display: flex;
     justify-content: space-around;
@@ -1021,12 +1415,19 @@
     opacity: 0.5;
     transition: opacity 0.5s;
 
+    @include max-w($m) {
+      &:not(:nth-child(-n + 2)) {
+        display: none;
+      }
+    }
+
     &:hover {
       opacity: 1;
     }
   }
 }
 
+// можно коммент по адаптации секции новостей! у мегя десктоп сделан на флексах + джастифи спейс бетвин+флекс врап врап! когда я сужаю экран у меня элементы не переместятся друг под друга, пока не столкнутся между собой! как лучше верстать эту секцию изначально? задать не спейс бетвин а маргины вправо кроме последнего? или как лучше? маргины всем кроме последнего тоже не очень, тк при перескакивании криво все становится (два верхних ровные - нижний смещено на размер маргина! Спасибо)
 .news {
   padding-bottom: 72px;
 
@@ -1034,6 +1435,14 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+
+    @include max-w($xl) {
+      justify-content: space-around;
+    }
+
+    @include max-w($m) {
+      flex-direction: column;
+    }
   }
 
   &__all {
@@ -1045,6 +1454,10 @@
     color: $green-900;
     border-bottom: 2px solid $green-900;
     transition: color 0.5s, border-color 0.5s, box-shadow 0.5s;
+
+    @include max-w($m) {
+      margin-bottom: 24px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
@@ -1063,15 +1476,23 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    @include max-w($m) {
+      justify-content: center;
+    }
   }
 
   &__item {
     max-width: 410px;
-    height: 348px;
     box-shadow: 0 3px 3px rgba($black, 0.25);
     border-radius: 6px;
     position: relative;
+
+    @include max-w($xl) {
+      margin: 0 5px 15px;
+    }
 
     &:hover .news__title {
       color: $green-900;
@@ -1100,6 +1521,11 @@
     color: $dark-900;
     @include line-clamp(3);
     transition: color 0.5s;
+
+    @include max-w($l) {
+      font-size: 14px;
+      line-height: 1.4;
+    }
   }
 
   &__data {
@@ -1139,10 +1565,44 @@
   background-color: $dark-800;
   padding-top: 30px;
 
+  &__logobox {
+    @include max-w($l) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    @include max-w($m) {
+      order: 1;
+      padding-top: 24px;
+    }
+
+    @include max-w($s) {
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+      }
+    }
+  }
+
   &__inner {
     padding: 25px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include max-w($m) {
+      justify-content: center;
+    }
   }
 
   &__text {
@@ -1190,6 +1650,30 @@
     column-count: 3;
     column-gap: 75px;
     margin-left: 75px;
+    position: relative;
+
+    @include max-w($l) {
+      margin-left: 0;
+      padding: 24px 0 6px;
+    }
+
+    @include max-w($m) {
+      column-count: 2;
+      column-gap: 50px;
+    }
+
+    @include max-w($s) {
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 1px;
+        background-color: rgba($white, 0.1);
+      }
+    }
   }
 
   &__item {
@@ -1210,10 +1694,15 @@
   }
 
   &__bottom-inner {
-    height: 78px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include max-w($m) {
+      flex-direction: column;
+      padding: 24px 0;
+    }
   }
 
   &__bottom-copy {
@@ -1227,6 +1716,11 @@
 
   &__bottom-accept {
     display: flex;
+
+    @include max-w($m) {
+      order: -1;
+      margin-bottom: 24px;
+    }
   }
 
   &__bottom-item {
@@ -1251,6 +1745,14 @@
 }
 
 .address {
+  @include max-w($l) {
+    padding-bottom: 24px;
+  }
+
+  @include max-w($m) {
+    order: -1;
+  }
+
   &__contacts-item {
     margin-bottom: 18px;
   }
@@ -1267,6 +1769,11 @@
 .social {
   display: flex;
   margin-right: 53px;
+
+  @include max-w($xl) {
+    justify-content: center;
+    margin-right: 0;
+  }
 
   &__item:not(:last-child) {
     margin-right: 12px;
