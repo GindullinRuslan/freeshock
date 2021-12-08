@@ -24,11 +24,163 @@
       <div class="header__top">
         <div class="container">
           <div class="header__topinner">
+
+            <button class="burger-btn" type="button">
+
+            </button>
+
+            <div class="media-menu">
+              <div class="media-menu__wrapper">
+                <div class="media-menu__top">
+                  <a class="logo" href="#">
+                    <picture>
+                      <source srcset="images/icons/icon-medialogo.svg"><img srcset="default.jpg"
+                        alt="Логотип онлайн-маркета Фрешок">
+                    </picture>
+                  </a>
+
+                  <button class="media-menu__closebtn" type="button">
+                    <span class="sr-only">закрыть окно меню</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="media-menu__usernav">
+                <div class="media-menu__wrapper">
+                  <div class="media-menu__content">
+                    <button class="media-menu__btn" type="button"
+                      style="background-image: url(images/icons/icon-user.svg);">
+
+                    </button>
+                    <a class="media-menu__login" href="#">
+                      Вход
+                    </a>
+
+                    <a class="media-menu__registration" href="#">
+                      Регистрация
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="media-menu__catalog-btn" type="button">
+                Каталог продуктов
+              </button>
+
+              <div class="media-menu__wrapper">
+                <address class="media-menu__address">
+                  <ul class="address__contacts">
+                    <li class="address__contacts-item">
+                      <a class="address__contacts-link address__contacts-link--tel animation-text"
+                        href="tel:+7907288365">Горячая линия+7 907 288
+                        365</a>
+                    </li>
+                    <li class="address__contacts-item">
+                      <a class="address__contacts-link address__contacts-link--map animation-text"
+                        href="#">Санкт-Петербург, ул. Ленина, 1</a>
+                    </li>
+                  </ul>
+
+                  <ul class="social">
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                        </svg>
+                        <span class="sr-only">
+                          ссылка на страницу facebook
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                        </svg>
+                        <span class="sr-only">
+                          ссылка на страницу youtube
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                        </svg>
+                        <span class="sr-only">
+                          ссылка на страницу telegram
+                        </span>
+                      </a>
+                    </li>
+
+                    <li class="social__item">
+                      <a class="social__link" href="#" target="_blank">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                        <span class="sr-only">
+                          ссылка на страницу instagram
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
+
+
+                <nav class="nav">
+                  <ul class="footer__menu">
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        О нас
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Публичная оферта
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Оплата и доставка
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Вакансии
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Акции
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Отзывы
+                      </a>
+                    </li>
+                    <li class="footer__item">
+                      <a class="footer__link animation-text" href="#">
+                        Новости
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
             <address class="header-address">
               <a class="address-link address-link--address animation-text" href="#">
                 адрес и время доставки
               </a>
-              <a class="hotline-link hotline-link--tel animation-text" href="#">
+              <a class="hotline-link hotline-link--tel animation-text" href="tel:+7907288365">
                 горячая линия 24/7
               </a>
             </address>
@@ -57,8 +209,11 @@
         <div class="container">
           <div class="header__bottom-inner">
             <a class="logo" href="#">
-              <img class="logo__img" src="images/icons/icon-logo.svg" alt="Логотип онлайн-маркета Фрешок" width="200"
-                height="60">
+              <picture>
+                <source srcset="images/icons/icon-logomini.svg" media="(max-width: 1024px)">
+                <source srcset="images/icons/icon-logo.svg"> <img srcset="default.svg"
+                  alt=" Логотип онлайн-маркета Фрешок">
+              </picture>
             </a>
 
             <div class="header__bottom-dropdown">
@@ -130,8 +285,8 @@
             </div>
 
             <form class="search-form">
-              <label class="sr-only" for="search">
-                Найти в магазине
+              <label class="search-form__label" for="search">
+                <span class="sr-only">Найти в магазине</span>
               </label>
               <input class="search-form__input" id="search" type="search" name="search"
                 placeholder="Найти в магазине ..." required>
@@ -140,11 +295,16 @@
 
             <ul class="user-nav">
               <li class="user-nav__item">
+                <button class="user-nav__btn user-nav__btn--search" type="button">
+                  <span class="sr-only">открыть поисковую строку</span>
+                </button>
+              </li>
+              <li class="user-nav__item user-nav__itemnone">
                 <button class="user-nav__btn user-nav__btn--user" type="button">
                   <span class="sr-only">открыть меню пользователя</span>
                 </button>
               </li>
-              <li class="user-nav__item">
+              <li class="user-nav__item user-nav__itemnone">
                 <button class="user-nav__btn user-nav__btn--favorites" type="button">
                   <span class="sr-only">войти в избранные товары</span>
                   <span class="user-nav__num">12</span>
@@ -595,7 +755,7 @@
         <button class="button button--white animation-btn" type="button">Показать еще</button>
       </div>
     </section>
-
+    <!-- 
     <section class="offer">
       <h2 class="sr-only">Предложения онлайн-маркета Фрешок</h2>
       <div class="container">
@@ -609,7 +769,7 @@
               <a class="offer__link" href="#">перейти к покупкам</a>
             </div>
           </li>
-          <li class="offer__item offer__item--little" style="background-image: url( images/offer/bg3.jpg);">
+          <li class="offer__item offer__item--little" style="background-image: url(images/offer/bg3.jpg);">
             <div class="offer__content">
               <span class="offer__subtitle">сезонная распродажа</span>
               <h3 class="offer__title">овощепад
@@ -631,7 +791,7 @@
       </div>
       </div>
     </section>
-
+-->
     <section class="stock" data-ref="container-2">
       <div class="container">
         <h2 class="title">акции</h2>
@@ -1022,10 +1182,12 @@
   <footer class="footer">
     <div class="container">
 
-      <a class="logo" href="#">
-        <img class="logo__img" src="images/icons/icon-logo.svg" alt="Логотип онлайн-маркета Фрешок" width="200"
-          height="60">
-      </a>
+      <div class="footer__logobox">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/icons/icon-logo.svg" alt="Логотип онлайн-маркета Фрешок" width="200"
+            height="60">
+        </a>
+      </div>
 
       <div class="footer__inner">
         <div class="footer__box">
