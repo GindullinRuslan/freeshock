@@ -1197,30 +1197,39 @@
 
   &__items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__item {
     background-repeat: no-repeat;
     object-fit: contain;
-    height: 300px;
     border-radius: 4px;
+    min-height: 300px;
+    flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    flex-grow: 1;
 
-    &--big {
-      flex: 2;
-      max-width: 630px;
+    &:nth-child(1) {
+      flex-grow: 2;
     }
 
-    &--little {
-      flex: 1;
-      max-width: 300px;
+    &:nth-child(2) {
+    }
+
+    &:nth-child(3) {
     }
   }
 
   &__content {
-    max-width: 350px;
-    width: 100%;
-    padding: 76px 32px 32px;
+    max-width: 346px;
+
+    &--little {
+      max-width: 178px;
+    }
+
     // вот тут что то не задалось с цветом, не задается через модификатор всему блоку, пришлось каждому прописывать
     &--whitetext {
       color: $white;
@@ -1812,5 +1821,40 @@
     &:active {
       fill: $green-200;
     }
+  }
+}
+
+.breadcrumbs {
+  padding: 24px 0;
+  background-color: $silver-100;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:nth-child(1) {
+    padding-right: 16px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 10px;
+      top: 5px;
+      right: 4px;
+      background-image: url(../images/icons/icon-chevron.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    font-style: inherit;
+    font-weight: 400;
+    color: $dark-500;
   }
 }
