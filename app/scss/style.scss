@@ -1192,101 +1192,101 @@
   }
 }
 
-.offer {
-  padding-bottom: 72px;
+// .offer {
+//   padding-bottom: 72px;
 
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+//   &__items {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
 
-  &__item {
-    background-repeat: no-repeat;
-    object-fit: contain;
-    border-radius: 4px;
-    min-height: 300px;
-    flex-basis: 300px;
-    display: flex;
-    align-items: center;
-    padding-left: 32px;
-    flex-grow: 1;
+//   &__item {
+//     background-repeat: no-repeat;
+//     object-fit: contain;
+//     border-radius: 4px;
+//     min-height: 300px;
+//     flex-basis: 300px;
+//     display: flex;
+//     align-items: center;
+//     padding-left: 32px;
+//     flex-grow: 1;
 
-    &:nth-child(1) {
-      flex-grow: 2;
-    }
+//     &:nth-child(1) {
+//       flex-grow: 2;
+//     }
 
-    &:nth-child(2) {
-    }
+//     &:nth-child(2) {
+//     }
 
-    &:nth-child(3) {
-    }
-  }
+//     &:nth-child(3) {
+//     }
+//   }
 
-  &__content {
-    max-width: 346px;
+//   &__content {
+//     max-width: 346px;
 
-    &--little {
-      max-width: 178px;
-    }
+//     &--little {
+//       max-width: 178px;
+//     }
 
-    // вот тут что то не задалось с цветом, не задается через модификатор всему блоку, пришлось каждому прописывать
-    &--whitetext {
-      color: $white;
+//     // вот тут что то не задалось с цветом, не задается через модификатор всему блоку, пришлось каждому прописывать
+//     &--whitetext {
+//       color: $white;
 
-      .offer__title {
-        text-shadow: 2px 2px 0 rgba($black, 0.25);
-        color: $white;
-      }
+//       .offer__title {
+//         text-shadow: 2px 2px 0 rgba($black, 0.25);
+//         color: $white;
+//       }
 
-      .offer__subtitle {
-        text-shadow: 1px 1px 0 rgba($black, 0.25);
-        color: $white;
-      }
+//       .offer__subtitle {
+//         text-shadow: 1px 1px 0 rgba($black, 0.25);
+//         color: $white;
+//       }
 
-      .offer__link {
-        border-bottom: 2px solid $white;
-        text-shadow: 1px 1px 0 rgba($black, 0.25);
-        color: $white;
-      }
-    }
-  }
+//       .offer__link {
+//         border-bottom: 2px solid $white;
+//         text-shadow: 1px 1px 0 rgba($black, 0.25);
+//         color: $white;
+//       }
+//     }
+//   }
 
-  &__subtitle {
-    display: block;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 1;
-    font-family: inherit;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: $dark-500;
-    @include line-clamp(1);
-  }
+//   &__subtitle {
+//     display: block;
+//     text-transform: uppercase;
+//     font-size: 12px;
+//     line-height: 1;
+//     font-family: inherit;
+//     font-weight: 700;
+//     letter-spacing: 0.03em;
+//     color: $dark-500;
+//     @include line-clamp(1);
+//   }
 
-  &__title {
-    margin-top: 18px;
-    text-transform: uppercase;
-    font-size: 30px;
-    line-height: 1.4;
-    color: $dark-500;
-    font-family: $ruda;
-    font-weight: 600;
-    margin-bottom: 12px;
-    @include line-clamp(2);
-  }
+//   &__title {
+//     margin-top: 18px;
+//     text-transform: uppercase;
+//     font-size: 30px;
+//     line-height: 1.4;
+//     color: $dark-500;
+//     font-family: $ruda;
+//     font-weight: 600;
+//     margin-bottom: 12px;
+//     @include line-clamp(2);
+//   }
 
-  &__link {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1;
-    color: $dark-500;
-    font-family: inherit;
-    font-weight: 700;
-    padding-bottom: 6px;
-    border-bottom: 2px solid $dark-500;
-  }
-}
+//   &__link {
+//     text-transform: uppercase;
+//     font-size: 14px;
+//     line-height: 1;
+//     color: $dark-500;
+//     font-family: inherit;
+//     font-weight: 700;
+//     padding-bottom: 6px;
+//     border-bottom: 2px solid $dark-500;
+//   }
+// }
 
 .stock {
   padding: 72px 0;
@@ -1856,5 +1856,16 @@
     font-style: inherit;
     font-weight: 400;
     color: $dark-500;
+  }
+}
+
+.catalog {
+
+  &__inner {
+    
+  }
+
+  &__filter {
+
   }
 }
