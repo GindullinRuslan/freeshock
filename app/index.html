@@ -20,161 +20,14 @@
 <body>
 
   <header class="header">
-    <nav class="nav">
+    <nav class="header__nav">
       <div class="header__top">
         <div class="container">
           <div class="header__topinner">
 
             <button class="burger-btn" type="button">
-
+              <span class="sr-only">открыть окно меню</span>
             </button>
-
-            <div class="media-menu">
-              <div class="media-menu__wrapper">
-                <div class="media-menu__top">
-                  <a class="logo" href="#">
-                    <picture>
-                      <source srcset="images/icons/icon-medialogo.svg"><img srcset="default.jpg"
-                        alt="Логотип онлайн-маркета Фрешок">
-                    </picture>
-                  </a>
-
-                  <button class="media-menu__closebtn" type="button">
-                    <span class="sr-only">закрыть окно меню</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="media-menu__usernav">
-                <div class="media-menu__wrapper">
-                  <div class="media-menu__content">
-                    <button class="media-menu__btn" type="button"
-                      style="background-image: url(images/icons/icon-user.svg);">
-
-                    </button>
-                    <a class="media-menu__login" href="#">
-                      Вход
-                    </a>
-
-                    <a class="media-menu__registration" href="#">
-                      Регистрация
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <button class="media-menu__catalog-btn" type="button">
-                Каталог продуктов
-              </button>
-
-              <div class="media-menu__wrapper">
-                <address class="media-menu__address">
-                  <ul class="address__contacts">
-                    <li class="address__contacts-item">
-                      <a class="address__contacts-link address__contacts-link--tel animation-text"
-                        href="tel:+7907288365">Горячая линия+7 907 288
-                        365</a>
-                    </li>
-                    <li class="address__contacts-item">
-                      <a class="address__contacts-link address__contacts-link--map animation-text"
-                        href="#">Санкт-Петербург, ул. Ленина, 1</a>
-                    </li>
-                  </ul>
-
-                  <ul class="social">
-                    <li class="social__item">
-                      <a class="social__link" href="#" target="_blank">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#icon-facebook"></use>
-                        </svg>
-                        <span class="sr-only">
-                          ссылка на страницу facebook
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="social__item">
-                      <a class="social__link" href="#" target="_blank">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#icon-youtube"></use>
-                        </svg>
-                        <span class="sr-only">
-                          ссылка на страницу youtube
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="social__item">
-                      <a class="social__link" href="#" target="_blank">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#icon-telegram"></use>
-                        </svg>
-                        <span class="sr-only">
-                          ссылка на страницу telegram
-                        </span>
-                      </a>
-                    </li>
-
-                    <li class="social__item">
-                      <a class="social__link" href="#" target="_blank">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                        </svg>
-                        <span class="sr-only">
-                          ссылка на страницу instagram
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </address>
-
-
-                <nav class="nav">
-                  <ul class="footer__menu">
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        О нас
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Контакты
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Публичная оферта
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Оплата и доставка
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Вакансии
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Акции
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Отзывы
-                      </a>
-                    </li>
-                    <li class="footer__item">
-                      <a class="footer__link animation-text" href="#">
-                        Новости
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
 
             <address class="header-address">
               <a class="address-link address-link--address animation-text" href="#">
@@ -210,74 +63,74 @@
           <div class="header__bottom-inner">
             <a class="logo" href="#">
               <picture>
-                <source srcset="images/icons/icon-logomini.svg" media="(max-width: 1024px)">
-                <source srcset="images/icons/icon-logo.svg"> <img srcset="default.svg"
-                  alt=" Логотип онлайн-маркета Фрешок">
+                <source srcset="images/icons/icon-logomini.svg" media="(max-width: 1024px)" sizes="max-width: 36px">
+                <source srcset="images/icons/icon-logo.svg" sizes="max-width: 200px">
+                <img class="logo__miniimg" srcset="images/icons/icon-logo.svg" alt=" Логотип онлайн-маркета Фрешок">
               </picture>
             </a>
 
-            <div class="header__bottom-dropdown">
+            <div class="header__bottom-dropdownmenu">
               <button class="header__catalog-btn" type="button">
                 Каталог продуктов
               </button>
-              <ul class="dropdown">
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+              <ul class="dropdownmenu">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Овощи и фрукты
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Бакалея
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Молочные продукты
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Хлеб
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Мясо
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Колбаса
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Рыба
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Алкоголь
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Напитки
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Торты
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Мясо
                   </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">
+                <li class="dropdownmenu__item">
+                  <a class="dropdownmenu__link" href="#">
                     Чай, кофе
                   </a>
                 </li>
@@ -345,7 +198,7 @@
                     Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. торопитесь!
                   </p>
                 </div>
-                <a class="button animation-btn" type="button">
+                <a class="button animation-btn" href="#">
                   Купить сейчас
                 </a>
               </div>
@@ -368,7 +221,7 @@
                     Только с 12 по 15 июля скидка на домашние помидорчики
                   </p>
                 </div>
-                <a class="button animation-btn" type="button">
+                <a class="button animation-btn" href="#">
                   Купить сейчас
                 </a>
               </div>
@@ -390,7 +243,7 @@
                 <div class="top-slider__text">
                   <p></p>
                 </div>
-                <a class="button animation-btn" type="button">
+                <a class="button animation-btn" href="#">
                   Купить сейчас
                 </a>
               </div>
@@ -760,32 +613,26 @@
       <h2 class="sr-only">Предложения онлайн-маркета Фрешок</h2>
       <div class="container">
         <ul class="offer__items">
-          <li class="offer__item offer__item--big" style="background-image: url(images/offer/bg1.jpg);">
-            <div class="offer__content offer__content--whitetext">
-              <span class="offer__subtitle">свежайшие фрукты</span>
-              <h3 class="offer__title">начни фруктовое лето
-                всего от 99<span>₽</span>
-              </h3>
-              <a class="offer__link" href="#">перейти к покупкам</a>
-            </div>
+          <li class="offer__item offer__item--white" style="background-image: url(images/offer/bg1.jpg);">
+            <span class="offer__subtitle">свежайшие фрукты</span>
+            <h3 class="offer__title">начни фруктовое лето
+              всего от 99<span>₽</span>
+            </h3>
+            <a class="offer__link" href="#">перейти к покупкам</a>
           </li>
-          <li class="offer__item offer__item--little" style="background-image: url(images/offer/bg2.jpg);">
-            <div class="offer__content offer__content--little">
-              <span class="offer__subtitle">сезонная распродажа</span>
-              <h3 class="offer__title">овощепад
-                до -50%
-              </h3>
-              <a class="offer__link" href="#">перейти к покупкам</a>
-            </div>
+          <li class="offer__item offer__item" style="background-image: url(images/offer/bg2.jpg);">
+            <span class="offer__subtitle">сезонная распродажа</span>
+            <h3 class="offer__title">овощепад
+              до -50%
+            </h3>
+            <a class="offer__link" href="#">перейти к покупкам</a>
           </li>
-          <li class="offer__item offer__item--little" style="background-image: url(images/offer/bg3.jpg);">
-            <div class="offer__content offer__content--little">
-              <span class="offer__subtitle">ням-ням</span>
-              <h3 class="offer__title">свежий
-                хлебчик
-              </h3>
-              <a class="offer__link" href="#">перейти к покупкам</a>
-            </div>
+          <li class="offer__item offer__item" style="background-image: url(images/offer/bg3.jpg);">
+            <span class="offer__subtitle">ням-ням</span>
+            <h3 class="offer__title">свежий
+              хлебчик
+            </h3>
+            <a class="offer__link" href="#">перейти к покупкам</a>
           </li>
         </ul>
       </div>
@@ -1083,27 +930,46 @@
 
     <div class="partners">
       <div class="container">
-        <ul class="partners__list">
-          <li class="partners__item">
-            <img src="images/partners/sprite.svg" alt="Партнер спрайт">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/drpepper.svg" alt="Партнер пеппер">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/cocacola.svg" alt="Партнер кока-кола">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/pepsi.svg" alt="Партнер пепси">
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/redbull.svg" alt="Партнер редбулл">
-
-          </li>
-          <li class="partners__item">
-            <img src="images/partners/fanta.svg" alt="Партнер фанта">
-          </li>
-        </ul>
+        <div class="swiperwrapper">
+          <ul class="partners__list">
+            <li class="partners__item">
+              <img src="images/partners/sprite.svg" alt="Партнер спрайт">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/drpepper.svg" alt="Партнер пеппер">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/cocacola.svg" alt="Партнер кока-кола">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/pepsi.svg" alt="Партнер пепси">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/redbull.svg" alt="Партнер редбулл">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/fanta.svg" alt="Партнер фанта">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/sprite.svg" alt="Партнер спрайт">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/drpepper.svg" alt="Партнер пеппер">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/cocacola.svg" alt="Партнер кока-кола">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/pepsi.svg" alt="Партнер пепси">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/redbull.svg" alt="Партнер редбулл">
+            </li>
+            <li class="partners__item">
+              <img src="images/partners/fanta.svg" alt="Партнер фанта">
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -1120,17 +986,17 @@
 
         <ul class="news__list">
           <li class="news__item">
-            <article>
-              <a class="news__link" href="#">
-                <time datetime="2021-07-15" class="news__data">
-                  <span class="news__month">июль</span>
-                  <span class="news__month news__month--num">15</span>
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <time datetime="2021-07-15" class="news-card__data">
+                  <span class="news-card__month">июль</span>
+                  <span class="news-card__month news-card__month--num">15</span>
                 </time>
 
-                <img class="news__images" src="images/news/bg1.jpg" alt="Распродажа сезонных фруктов" width="410"
+                <img class="news-card__images" src="images/news/bg1.jpg" alt="Распродажа сезонных фруктов" width="410"
                   height="240">
 
-                <h3 class="news__title">
+                <h3 class="news-card__title">
                   Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
                   разобрали!
                 </h3>
@@ -1139,17 +1005,17 @@
           </li>
 
           <li class="news__item">
-            <article>
-              <a class="news__link" href="#">
-                <time datetime="2021-05-07" class="news__data">
-                  <span class="news__month">май</span>
-                  <span class="news__month news__month--num">07</span>
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <time datetime="2021-05-07" class="news-card__data">
+                  <span class="news-card__month">май</span>
+                  <span class="news-card__month news-card__month--num">07</span>
                 </time>
 
-                <img class="news__images" src="images/news/bg2.jpg" alt="Шикарнейший выбор манго в нашем онлайн-маркете"
-                  width="410" height="240">
+                <img class="news-card__images" src="images/news/bg2.jpg"
+                  alt="Шикарнейший выбор манго в нашем онлайн-маркете" width="410" height="240">
 
-                <h3 class="news__title">
+                <h3 class="news-card__title">
                   Шикарнейший выбор манго в нашем онлайн-маркете
                 </h3>
               </a>
@@ -1157,17 +1023,17 @@
           </li>
 
           <li class="news__item">
-            <article>
-              <a class="news__link" href="#">
-                <time datetime="2021-02-20" class="news__data">
-                  <span class="news__month">февраль</span>
-                  <span class="news__month news__month--num">20</span>
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <time datetime="2021-02-20" class="news-card__data">
+                  <span class="news-card__month">февраль</span>
+                  <span class="news-card__month news-card__month--num">20</span>
                 </time>
 
-                <img class="news__images" src="images/news/bg3.jpg" alt="Всё, что вы хотели знать о папайя" width="410"
-                  height="240">
+                <img class="news-card__images" src="images/news/bg3.jpg" alt="Всё, что вы хотели знать о папайя"
+                  width="410" height="240">
 
-                <h3 class="news__title">
+                <h3 class="news-card__title">
                   Всё, что вы хотели знать о папайя
                 </h3>
               </a>
@@ -1199,7 +1065,7 @@
             <label class="sr-only" for="mail">
               введите e-mail, чтобы подписаться
             </label>
-            <input class="footer__input" type="email" id="mail" placeholder="email@email.com" required>
+            <input class="footer__input" type="email" id="mail" name="email" placeholder="email@email.com" required>
             <button class="button button--footer animation-btn" type="submit">
               подписаться
             </button>
@@ -1328,6 +1194,148 @@
       </div>
     </div>
   </footer>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__wrapper">
+      <div class="mobile-menu__top">
+        <a class="logo" href="#">
+          <picture>
+            <source srcset="images/icons/icon-mobilelogo.svg" sizes="min-width: 200px">
+            <img class="logo__mobileimg" srcset="images/icons/icon-mobilelogo.svg" alt="Логотип онлайн-маркета Фрешок">
+          </picture>
+        </a>
+
+        <button class="mobile-menu__closebtn" type="button">
+          <span class="sr-only">закрыть окно меню</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu__usernav">
+      <div class="mobile-menu__wrapper">
+        <div class="mobile-menu__content">
+          <button class="mobile-menu__btn" type="button" style="background-image: url(images/icons/icon-user.svg);">
+            <span class="sr-only">открыть пользовательское меню</span>
+          </button>
+          <a class="mobile-menu__login" href="#">
+            Вход
+          </a>
+
+          <a class="mobile-menu__registration" href="#">
+            Регистрация
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-menu__catalog-btn" type="button">
+      Каталог продуктов
+    </button>
+
+      <address class="address address--mobile">
+        <ul class="address__contacts">
+          <li class="address__contacts-item">
+            <a class="address__contacts-link address__contacts-link--tel animation-text" href="tel:+7907288365">+7
+              907 288 365</a>
+          </li>
+          <li class="address__contacts-item">
+            <a class="address__contacts-link address__contacts-link--map animation-text" href="#">Санкт-Петербург, ул.
+              Ленина,
+              1</a>
+          </li>
+        </ul>
+
+        <ul class="social social--black">
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="sr-only">
+                ссылка на страницу facebook
+              </span>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-youtube"></use>
+              </svg>
+              <span class="sr-only">
+                ссылка на страницу youtube
+              </span>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-telegram"></use>
+              </svg>
+              <span class="sr-only">
+                ссылка на страницу telegram
+              </span>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link" href="#" target="_blank">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg>
+              <span class="sr-only">
+                ссылка на страницу instagram
+              </span>
+            </a>
+          </li>
+        </ul>
+      </address>
+
+      <ul class="mobile-menu__nav">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Доставка
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            О нас
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Новости
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Контакты
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Акции
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Вакансии
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Отзывы
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link animation-text" href="#">
+            Публичная оферта
+          </a>
+        </li>
+      </ul>
+      </nav>
+    </div>
 
   <script src="js/main.min.js"></script>
 </body>
