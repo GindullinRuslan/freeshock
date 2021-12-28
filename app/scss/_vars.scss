@@ -22,6 +22,14 @@ $open-sans: "OpenSans", sans-serif;
 
 $ruda: "Ruda", sans-serif;
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
     overflow: hidden;
