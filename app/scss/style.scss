@@ -238,9 +238,6 @@
 
   &__address {
     padding: 24px 0;
-
-    & .address__contacts-link {
-    }
   }
 
   &--active {
@@ -789,13 +786,9 @@
     justify-content: center;
     margin-top: 50px;
     list-style: none;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 15px;
-    transform: scale(0);
-
-    @include max-w($l) {
-      transform: scale(1);
-    }
   }
 
   & .slick-dots button {
@@ -811,7 +804,7 @@
   & .slick-active button {
     border: 1px solid $green-900;
     background-color: $green-900;
-    transition: all 0.5s;
+    transition: background-color 0.5s, border 0.5s;
   }
 }
 
@@ -2124,7 +2117,7 @@
     line-height: 1.2;
     letter-spacing: 0.03em;
 
-        @include max-w($m) {
+    @include max-w($m) {
       font-size: 30px;
     }
   }
@@ -2144,7 +2137,7 @@
     }
 
     &--active {
-      position: fixed; 
+      position: fixed;
       height: 100%;
       width: 320px;
       background-color: $white;
@@ -3392,6 +3385,10 @@
     margin-bottom: 60px;
   }
 
+  &__slider {
+    margin: 0 auto;
+  }
+
   & .slick-slide {
     margin: 0 15px;
   }
@@ -3399,9 +3396,39 @@
   & .slick-list {
     margin-right: -15px;
     margin-left: -15px;
+    text-align: center;
   }
 
   & .slick-disabled {
     fill: $silver-600;
+  }
+
+  & .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    list-style: none;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -21px;
+  }
+
+  & .slick-dots button {
+    font-size: 0;
+    margin: 0 6px;
+    border-radius: 50%;
+    width: 10px;
+    height: 14px;
+    background-color: $white;
+    border: 1px solid $silver-600;
+  }
+
+  & .slick-dots {
+    .slick-active button {
+      border: 1px solid $green-900;
+      background-color: $green-900;
+      transition: background-color 0.5s, border 0.5s;
+    }
   }
 }

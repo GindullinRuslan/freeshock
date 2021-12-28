@@ -23,6 +23,10 @@ body {
   max-width: 1320px;
   padding: 0 15px;
   margin: 0 auto;
+
+  &--products {
+    max-width: 1330px;
+  }
 }
 
 .sr-only {

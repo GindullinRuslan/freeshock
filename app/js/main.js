@@ -16,8 +16,27 @@ $(function () {
     dots: false,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 3,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
   });
 
+  $('.top-slider__inner').slick({
+    prevArrow: '<button type="button" class="top-slider__btn top-slider__btn--prev"><svg class="top-slider__arrow top-slider__arrow--prev"><use xlink:href="./images/sprite.svg#icon-arrow-left"></use></svg></button>',
+
+    nextArrow: '<button type="button" class="top-slider__btn top-slider__btn--next"><svg class="top-slider__arrow top-slider__arrow--next"><use xlink:href="./images/sprite.svg#icon-arrow-right"></use></svg></button>',
+
+    infinite: false,
+    dots: true,
+  });
 
   $('.product-tabs__top-link').on('click', function (e) {
     e.preventDefault();
@@ -75,17 +94,8 @@ $(function () {
 
 
   $('.select-style__sort, .select-style__show').styler();
+  
   $('.number__input').styler();
-
-  $('.top-slider__inner').slick({
-    prevArrow: '<button type="button" class="top-slider__btn top-slider__btn--prev"><svg class="top-slider__arrow top-slider__arrow--prev"><use xlink:href="./images/sprite.svg#icon-arrow-left"></use></svg></button>',
-
-    nextArrow: '<button type="button" class="top-slider__btn top-slider__btn--next"><svg class="top-slider__arrow top-slider__arrow--next"><use xlink:href="./images/sprite.svg#icon-arrow-right"></use></svg></button>',
-
-    infinite: false,
-    dots: true,
-  });
-
 
   $('.partners__list').slick({
     dots: false,
